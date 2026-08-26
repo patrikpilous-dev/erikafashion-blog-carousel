@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Blog carousel — náhled</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:1000px;margin:0 auto;padding:24px;color:#111;background:#fff}
+  h1{font-size:20px}
+  .meta{color:#666;font-size:13px;margin-bottom:28px}
+  .article{border:1px solid #e5e5e5;border-radius:8px;padding:8px 24px 20px;margin-bottom:32px}
+  .article h3{font-size:15px;color:#444;font-weight:600}
+  .article h3 a{color:inherit}
+</style>
+</head>
+<body>
+<h1>Erika Fashion — blog carousel (náhled dat)</h1>
+<div class="meta" id="meta">Načítám carousel.json…</div>
+<div id="out"></div>
+<script>
+fetch("carousel.json").then(r => r.json()).then(data => {
+  document.getElementById("meta").textContent =
+    "Vygenerováno: " + data.generated + " · článků: " + Object.keys(data.articles).length +
+    " · fallback " + (data.fallback_enabled ? "zapnutý" : "vypnutý");
+  const out = document.getElementById("out");
+  const entries = Object.entries(data.articles).concat([["default (fallback pro nenamapované)", data.default]]);
+  for (const [path, entry] of entries) {
+    const div = document.createElement("div");
+    div.className = "article";
+    const link = path.startsWith("/") ? '<a href="https://www.erikafashion.cz' + path + '" target="_blank">' + path + "</a>" : path;
+    div.innerHTML = "<h3>" + link + " · " + entry.products.length + " produktů</h3>";
+    // render pres stejny kod jako na webu
+    const host = document.createElement("div");
+    host.className = "news-item-detail";
+    div.appendChild(host);
+    out.appendChild(div);
+    renderCarousel(host, entry.products);
+  }
+});
+// zjednodusena kopie renderu z carousel.js (bez GA4)
+function renderCarousel(host, products) {
+  if (!document.getElementById("ppcar-css")) {
+    const s = document.createElement("style");
+    s.id = "ppcar-css";
+    s.textContent = ".ppcar{margin:24px 0 6px}.ppcar h2{font-size:19px;margin:0 0 14px;text-align:center;font-weight:600;letter-spacing:.03em;text-transform:uppercase}.ppcar-wrap{position:relative}.ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:2px 2px 12px}.ppcar-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;text-align:center}@media(min-width:768px){.ppcar-item{flex-basis:23%}}.ppcar-item a{display:block;text-decoration:none;color:inherit}.ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}.ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;min-height:2.7em}.ppcar-price{font-size:14px;font-weight:700}.ppcar-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}.ppcar-btn:hover{background:#000;color:#fff}.ppcar-prev{left:-8px}.ppcar-next{right:-8px}";
+    document.head.appendChild(s);
+  }
+  const sec = document.createElement("section");
+  sec.className = "ppcar";
+  let html = '<h2>Mohlo by se vám líbit</h2><div class="ppcar-wrap"><button class="ppcar-btn ppcar-prev">&#10094;</button><div class="ppcar-track">';
+  for (const p of products) {
+    html += '<div class="ppcar-item"><a href="' + p.url + '" target="_blank"><img loading="lazy" src="' + p.img + '"><div class="ppcar-name">' + p.name + '</div><div class="ppcar-price">' + new Intl.NumberFormat("cs-CZ", {style:"currency",currency:"CZK",maximumFractionDigits:0}).format(p.price) + "</div></a></div>";
+  }
+  html += '</div><button class="ppcar-btn ppcar-next">&#10095;</button></div>';
+  sec.innerHTML = html;
+  host.appendChild(sec);
+  const track = sec.querySelector(".ppcar-track");
+  sec.querySelector(".ppcar-prev").onclick = () => track.scrollBy({left:-track.clientWidth,behavior:"smooth"});
+  sec.querySelector(".ppcar-next").onclick = () => track.scrollBy({left:track.clientWidth,behavior:"smooth"});
+}
+</script>
+</body>
+</html>

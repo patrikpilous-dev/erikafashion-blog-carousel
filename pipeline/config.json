@@ -1,0 +1,18 @@
+{
+  "shop_url": "https://www.erikafashion.cz",
+  "feed_url": "https://www.erikafashion.cz/heureka/export/products.xml",
+  "pages_base": "https://patrikpilous-dev.github.io/erikafashion-blog-carousel",
+  "products_per_carousel": 10,
+  "min_products": 4,
+  "max_category_pages": 3,
+  "fallback_enabled": false,
+  "articles": {
+    "/blog/jake-saty-vybrat-na-svatbu-jako-host/": {
+      "categories": ["/saty-svatebni/", "/saty-na-svatbu-na-raminka/", "/saty-satenove/", "/saty-kvetovana/"]
+    },
+    "/blog/trenckot--must-have-vaseho-satniku--co-to-je-a-jak-ho-nosit-s-gracii-/": {
+      "categories": ["/trenckoty/"]
+    }
+  },
+  "fallback_categories": ["/saty-sukne/"]
+}
