@@ -12,6 +12,21 @@
     },
     "/blog/trenckot--must-have-vaseho-satniku--co-to-je-a-jak-ho-nosit-s-gracii-/": {
       "categories": ["/trenckoty/"]
+    },
+    "/blog/business-casual-dress-code-pro-zeny/": {
+      "categories": ["/elegantni-kalhoty/", "/kosile/", "/elegantni-saty-midi-pod-kolena/"]
+    },
+    "/blog/jak-nosit-kalhoty-culottes-a-komu-slusi/": {
+      "categories": ["/kalhoty-culottes/", "/kalhoty-letni/"]
+    },
+    "/blog/5-tipu--jak-nosit-kosile-pro-zeny/": {
+      "categories": ["/kosile-klasicke/", "/riflove-kosile/"]
+    },
+    "/blog/jak-a-jake-tenisky-nosit-k-satum/": {
+      "categories": ["/saty-maxi-dlouhe/", "/saty-kvetovana/", "/saty-uzke/"]
+    },
+    "/blog/komu-slusi-ofina-a-kdo-by-se-ji-mel-vyhnout-obloukem/": {
+      "categories": []
     }
   },
   "fallback_categories": ["/saty-sukne/"]

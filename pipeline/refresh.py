@@ -148,15 +148,28 @@ def main():
     feed = load_feed()
     n = CONFIG["products_per_carousel"]
 
+    default_items = build_list(CONFIG["fallback_categories"], feed, scores, n * 3)
+
     articles = {}
     for article_path, spec in CONFIG["articles"].items():
         items = build_list(spec["categories"], feed, scores, n)
+        # Kdyz se tematicke produkty vyprodaji, dorovnej bestsellery — carousel
+        # nikdy nezmizi ani neprorídne (rozhodnuti Patrika 8/2026).
+        if len(items) < n:
+            have = {p["url"] for p in items}
+            for p in default_items:
+                if len(items) >= n:
+                    break
+                if p["url"] not in have:
+                    items.append(p)
+                    have.add(p["url"])
+            print(f"INFO: {article_path} dorovnan bestsellery na {len(items)}", file=sys.stderr)
         if len(items) >= CONFIG["min_products"]:
             articles[article_path] = {"products": items}
         else:
             print(f"VAROVANI: {article_path} ma jen {len(items)} produktu, vynechavam", file=sys.stderr)
 
-    default_items = build_list(CONFIG["fallback_categories"], feed, scores, n)
+    default_items = default_items[:n]
 
     out = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
