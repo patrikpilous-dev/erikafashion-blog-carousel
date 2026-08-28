@@ -43,14 +43,14 @@ function renderCarousel(host, products) {
   if (!document.getElementById("ppcar-css")) {
     const s = document.createElement("style");
     s.id = "ppcar-css";
-    s.textContent = ".ppcar{margin:24px 0 40px}.ppcar-wrap{position:relative}.ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:2px;scrollbar-width:none;-ms-overflow-style:none}.ppcar-track::-webkit-scrollbar{display:none}.ppcar-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;text-align:center}@media(min-width:768px){.ppcar-item{flex-basis:23%}}.ppcar-item a{display:block;text-decoration:none;color:inherit}.ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}.ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;min-height:2.7em}.ppcar-price{font-size:14px;font-weight:700}.ppcar-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}.ppcar-btn:hover{background:#000;color:#fff}.ppcar-prev{left:-8px}.ppcar-next{right:-8px}";
+    s.textContent = ".ppcar{margin:24px 0 40px}.ppcar-wrap{position:relative}.ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:2px;scrollbar-width:none;-ms-overflow-style:none}.ppcar-track::-webkit-scrollbar{display:none}.ppcar-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;text-align:center}@media(min-width:768px){.ppcar-item{flex-basis:23%}}.ppcar-item a{display:block;text-decoration:none;color:inherit}.ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}.ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;min-height:2.7em}.ppcar-price{font-size:15px;font-weight:600;color:#866e4f}.ppcar-stock{font-size:12px;color:#009901;margin-top:4px}.ppcar-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}.ppcar-btn:hover{background:#000;color:#fff}.ppcar-prev{left:-8px}.ppcar-next{right:-8px}";
     document.head.appendChild(s);
   }
   const sec = document.createElement("section");
   sec.className = "ppcar";
   let html = '<div class="ppcar-wrap"><button class="ppcar-btn ppcar-prev">&#10094;</button><div class="ppcar-track">';
   for (const p of products) {
-    html += '<div class="ppcar-item"><a href="' + p.url + '" target="_blank"><img loading="lazy" src="' + p.img + '"><div class="ppcar-name">' + p.name + '</div><div class="ppcar-price">' + new Intl.NumberFormat("cs-CZ", {style:"currency",currency:"CZK",maximumFractionDigits:0}).format(p.price) + "</div></a></div>";
+    html += '<div class="ppcar-item"><a href="' + p.url + '" target="_blank"><img loading="lazy" src="' + p.img + '"><div class="ppcar-name">' + p.name + '</div><div class="ppcar-price">' + new Intl.NumberFormat("cs-CZ", {style:"currency",currency:"CZK",maximumFractionDigits:0}).format(p.price) + '</div><div class="ppcar-stock">Skladem</div></a></div>';
   }
   html += '</div><button class="ppcar-btn ppcar-next">&#10095;</button></div>';
   sec.innerHTML = html;

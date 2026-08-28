@@ -47,7 +47,9 @@
     ".ppcar-item a{display:block;text-decoration:none;color:inherit}" +
     ".ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}" +
     ".ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}" +
-    ".ppcar-price{font-size:14px;font-weight:700}" +
+    /* barvy prevzate ze sablony e-shopu: cena .price-final, dostupnost .availability-label */
+    ".ppcar-price{font-size:15px;font-weight:600;color:#866e4f}" +
+    ".ppcar-stock{font-size:12px;color:#009901;margin-top:4px}" +
     ".ppcar-btn{position:absolute;top:34%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2;opacity:.92}" +
     ".ppcar-btn:hover{background:#000;color:#fff;border-color:#000}" +
     ".ppcar-prev{left:-8px}.ppcar-next{right:-8px}" +
@@ -81,7 +83,8 @@
       html += "<div class=\"ppcar-item\"><a href=\"" + p.url + "\" data-i=\"" + i + "\">" +
         "<img loading=\"lazy\" src=\"" + p.img + "\" alt=\"" + p.name.replace(/"/g, "&quot;") + "\">" +
         "<div class=\"ppcar-name\">" + p.name + "</div>" +
-        "<div class=\"ppcar-price\">" + formatPrice(p.price) + "</div></a></div>";
+        "<div class=\"ppcar-price\">" + formatPrice(p.price) + "</div>" +
+        "<div class=\"ppcar-stock\">Skladem</div></a></div>";
     });
     html += "</div><button class=\"ppcar-btn ppcar-next\" type=\"button\" aria-label=\"Další\">&#10095;</button></div>";
     sec.innerHTML = html;
