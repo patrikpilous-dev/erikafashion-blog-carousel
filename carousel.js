@@ -41,7 +41,8 @@
     ".ppcar{margin:40px 0 10px;font-family:inherit}" +
     ".ppcar h2{font-size:22px;margin:0 0 18px;text-align:center;font-weight:600;letter-spacing:.03em;text-transform:uppercase}" +
     ".ppcar-wrap{position:relative}" +
-    ".ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:2px 2px 12px;scrollbar-width:thin}" +
+    ".ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:2px;scrollbar-width:none;-ms-overflow-style:none}" +
+    ".ppcar-track::-webkit-scrollbar{display:none}" +
     ".ppcar-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;text-align:center}" +
     "@media(min-width:768px){.ppcar-item{flex-basis:23%}}" +
     ".ppcar-item a{display:block;text-decoration:none;color:inherit}" +
@@ -53,10 +54,21 @@
     ".ppcar-prev{left:-8px}.ppcar-next{right:-8px}" +
     "@media(max-width:767px){.ppcar-btn{display:none}}";
 
+  /* Carousel patri pod prvni odstavec clanku, ne na konec. Kotva = prvni
+     odstavec s realnym textem (preskoc prazdne, obrazkove a popisky fotek). */
+  function findAnchor() {
+    var root = document.querySelector(".news-item-detail .text") ||
+      document.querySelector(".news-item-detail");
+    if (!root) return null;
+    var ps = root.querySelectorAll("p");
+    for (var i = 0; i < ps.length; i++) {
+      if (ps[i].querySelector("img")) continue;
+      if (ps[i].textContent.trim().length >= 80) return ps[i];
+    }
+    return null;
+  }
+
   function render(products) {
-    var host = document.querySelector(".ppcar-mount") ||
-      document.querySelector(".news-item-detail") ||
-      document.querySelector("#content") || document.body;
     var style = document.createElement("style");
     style.textContent = CSS;
     document.head.appendChild(style);
@@ -74,7 +86,16 @@
     });
     html += "</div><button class=\"ppcar-btn ppcar-next\" type=\"button\" aria-label=\"Další\">&#10095;</button></div>";
     sec.innerHTML = html;
-    host.appendChild(sec);
+
+    var anchor = findAnchor();
+    if (anchor && anchor.parentNode) {
+      anchor.parentNode.insertBefore(sec, anchor.nextSibling);
+    } else {
+      var host = document.querySelector(".ppcar-mount") ||
+        document.querySelector(".news-item-detail") ||
+        document.querySelector("#content") || document.body;
+      host.appendChild(sec);
+    }
 
     var track = sec.querySelector(".ppcar-track");
     sec.querySelector(".ppcar-prev").addEventListener("click", function () {
