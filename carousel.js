@@ -38,8 +38,7 @@
   }
 
   var CSS = "" +
-    ".ppcar{margin:40px 0 10px;font-family:inherit}" +
-    ".ppcar h2{font-size:22px;margin:0 0 18px;text-align:center;font-weight:600;letter-spacing:.03em;text-transform:uppercase}" +
+    ".ppcar{margin:32px 0 48px;font-family:inherit}" +
     ".ppcar-wrap{position:relative}" +
     ".ppcar-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:2px;scrollbar-width:none;-ms-overflow-style:none}" +
     ".ppcar-track::-webkit-scrollbar{display:none}" +
@@ -49,7 +48,7 @@
     ".ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}" +
     ".ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}" +
     ".ppcar-price{font-size:14px;font-weight:700}" +
-    ".ppcar-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2;opacity:.92}" +
+    ".ppcar-btn{position:absolute;top:34%;transform:translateY(-50%);width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;cursor:pointer;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2;opacity:.92}" +
     ".ppcar-btn:hover{background:#000;color:#fff;border-color:#000}" +
     ".ppcar-prev{left:-8px}.ppcar-next{right:-8px}" +
     "@media(max-width:767px){.ppcar-btn{display:none}}";
@@ -75,7 +74,7 @@
 
     var sec = document.createElement("section");
     sec.className = "ppcar";
-    var html = "<h2>Mohlo by se vám líbit</h2><div class=\"ppcar-wrap\">" +
+    var html = "<div class=\"ppcar-wrap\">" +
       "<button class=\"ppcar-btn ppcar-prev\" type=\"button\" aria-label=\"Předchozí\">&#10094;</button>" +
       "<div class=\"ppcar-track\">";
     products.forEach(function (p, i) {
