@@ -44,7 +44,8 @@
     ".ppcar-track::-webkit-scrollbar{display:none}" +
     ".ppcar-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;text-align:center}" +
     "@media(min-width:768px){.ppcar-item{flex-basis:23%}}" +
-    ".ppcar-item a{display:block;text-decoration:none;color:inherit}" +
+    /* !important — sablona podtrhava odkazy v tele clanku pravidlem z cizi domeny */
+    ".ppcar .ppcar-item a,.ppcar .ppcar-item a:hover,.ppcar .ppcar-item a:focus{display:block;text-decoration:none !important;color:inherit}" +
     ".ppcar-item img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;background:#f5f5f5}" +
     ".ppcar-name{margin:10px 4px 4px;font-size:14px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}" +
     /* barvy prevzate ze sablony e-shopu: cena .price-final, dostupnost .availability-label */
