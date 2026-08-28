@@ -54,7 +54,9 @@
     "@media(max-width:767px){.ppcar-btn{display:none}}";
 
   function render(products) {
-    var host = document.querySelector(".news-item-detail") || document.querySelector("#content") || document.body;
+    var host = document.querySelector(".ppcar-mount") ||
+      document.querySelector(".news-item-detail") ||
+      document.querySelector("#content") || document.body;
     var style = document.createElement("style");
     style.textContent = CSS;
     document.head.appendChild(style);
