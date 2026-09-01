@@ -1,10 +1,15 @@
 /* Blog produktovy carousel — Erika Fashion
- * Jediny zasah do sablony: <script src=".../carousel.js" defer></script>
- * Data: carousel.json na GitHub Pages, generovane denne.
- * Mereni: GA4 view_item_list / select_item, item_list_id "blog_carousel".
+ * Nasazuje se jednim script tagem: v paticce sablony (plosne) NEBO v tele
+ * clanku. Pojistka nize zajisti, ze i kdyz je vlozeny obema zpusoby soucasne,
+ * carousel se vykresli jen jednou.
+ * Data: a/<slug>.json na GitHub Pages, generovane denne.
+ * Mereni: GA4 view_item_list / select_item + user property pro trzby.
  */
 (function () {
   "use strict";
+
+  if (window.__ppcarLoaded) return;
+  window.__ppcarLoaded = true;
 
   var BASE = "https://patrikpilous-dev.github.io/erikafashion-blog-carousel";
   var m = location.pathname.match(/^\/blog\/[^/]+\/$/);
