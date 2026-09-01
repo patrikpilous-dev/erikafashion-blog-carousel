@@ -20,6 +20,29 @@
     }
   }
 
+  /* Trzby: Shoptet posila vlastni purchase event, do ktereho nemuzeme sahnout.
+     Proto pri kliku nastavime GA4 user property — ta se automaticky pripoji ke
+     vsem dalsim eventum vcetne purchase, takze jde v GA4 segmentovat trzby
+     zakazniku, kteri prisli z carouselu. Klik zaroven ulozime do sessionStorage
+     pro pozdejsi presnou atribuci na dekovaci strance. */
+  function markClick(product) {
+    var stamp = articleSlug + "|" + new Date().toISOString().slice(0, 10);
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("set", "user_properties", { ef_blog_carousel: stamp });
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "blog_carousel_click", ef_blog_carousel: stamp });
+      }
+    } catch (e) { /* mereni nesmi rozbit stranku */ }
+    try {
+      var key = "ppcar_clicks";
+      var log = JSON.parse(sessionStorage.getItem(key) || "[]");
+      log.push({ code: product.code, price: product.price, article: articleSlug, ts: Date.now() });
+      sessionStorage.setItem(key, JSON.stringify(log.slice(-20)));
+    } catch (e) { /* private mode */ }
+  }
+
   function ga4(eventName, items) {
     var params = {
       item_list_id: "blog_carousel",
@@ -110,7 +133,10 @@
 
     sec.addEventListener("click", function (e) {
       var a = e.target.closest("a[data-i]");
-      if (a) ga4("select_item", [products[+a.getAttribute("data-i")]]);
+      if (!a) return;
+      var product = products[+a.getAttribute("data-i")];
+      ga4("select_item", [product]);
+      markClick(product);
     });
 
     if ("IntersectionObserver" in window) {
@@ -129,14 +155,17 @@
     }
   }
 
+  function load(name) {
+    return fetch(BASE + "/a/" + name + ".json").then(function (r) {
+      return r.ok ? r.json() : null;
+    });
+  }
+
   function init() {
-    fetch(BASE + "/carousel.json")
-      .then(function (r) { return r.ok ? r.json() : null; })
+    load(articleSlug)
+      .then(function (data) { return data || load("_default"); })
       .then(function (data) {
-        if (!data) return;
-        var entry = data.articles[articlePath];
-        if (!entry && data.fallback_enabled) entry = data.default;
-        if (entry && entry.products && entry.products.length) render(entry.products);
+        if (data && data.products && data.products.length) render(data.products);
       })
       .catch(function () { /* ticho — carousel je nice-to-have */ });
   }

@@ -5,29 +5,1067 @@
   "products_per_carousel": 10,
   "min_products": 4,
   "max_category_pages": 3,
-  "fallback_enabled": false,
+  "fallback_enabled": true,
   "articles": {
     "/blog/jake-saty-vybrat-na-svatbu-jako-host/": {
-      "categories": ["/saty-svatebni/", "/saty-na-svatbu-na-raminka/", "/saty-satenove/", "/saty-kvetovana/"]
+      "categories": [
+        "/saty-svatebni/",
+        "/saty-na-svatbu-na-raminka/",
+        "/saty-satenove/",
+        "/saty-kvetovana/"
+      ]
     },
     "/blog/trenckot--must-have-vaseho-satniku--co-to-je-a-jak-ho-nosit-s-gracii-/": {
-      "categories": ["/trenckoty/"]
+      "categories": [
+        "/trenckoty/"
+      ]
     },
     "/blog/business-casual-dress-code-pro-zeny/": {
-      "categories": ["/elegantni-kalhoty/", "/kosile/", "/elegantni-saty-midi-pod-kolena/"]
+      "categories": [
+        "/elegantni-kalhoty/",
+        "/kosile/",
+        "/elegantni-saty-midi-pod-kolena/"
+      ]
     },
     "/blog/jak-nosit-kalhoty-culottes-a-komu-slusi/": {
-      "categories": ["/kalhoty-culottes/", "/kalhoty-letni/"]
+      "categories": [
+        "/kalhoty-culottes/",
+        "/kalhoty-letni/"
+      ]
     },
     "/blog/5-tipu--jak-nosit-kosile-pro-zeny/": {
-      "categories": ["/kosile-klasicke/", "/riflove-kosile/"]
+      "categories": [
+        "/kosile-klasicke/",
+        "/riflove-kosile/"
+      ]
     },
     "/blog/jak-a-jake-tenisky-nosit-k-satum/": {
-      "categories": ["/saty-maxi-dlouhe/", "/saty-kvetovana/", "/saty-uzke/"]
+      "categories": [
+        "/saty-maxi-dlouhe/",
+        "/saty-kvetovana/",
+        "/saty-uzke/"
+      ]
     },
     "/blog/komu-slusi-ofina-a-kdo-by-se-ji-mel-vyhnout-obloukem/": {
       "categories": []
+    },
+    "/blog/-kdy--nude-neni-nuda/": {
+      "categories": []
+    },
+    "/blog/13-dulezitych-vitaminu-pro-nase-zdravi/": {
+      "categories": []
+    },
+    "/blog/3-kroky-pro-jarni-detox-vaseho-satniku/": {
+      "categories": []
+    },
+    "/blog/3-tipy--jak-si-spravne-vybrat-spodni-pradlo/": {
+      "categories": []
+    },
+    "/blog/3-tipy-na-elegantni-a-pohodlne-home-office-obleceni/": {
+      "categories": []
+    },
+    "/blog/3-zpusoby-jak-nosit-puntiky/": {
+      "categories": []
+    },
+    "/blog/4-typy-jeansu--ktere-jsou-modnim-trendem-v-roce-2021/": {
+      "categories": [
+        "/dziny/",
+        "/siroke-dziny/",
+        "/dziny-skinny/"
+      ]
+    },
+    "/blog/5-dokonalych-outfitu-podle-vas/": {
+      "categories": []
+    },
+    "/blog/5-fashion-trendu--ktere-letos-ovladaji-socialni-site/": {
+      "categories": []
+    },
+    "/blog/5-jarnich-outfitu--ktere-vypadaji-luxusne-diky-spravne-kombinaci-bot-a-kabelky/": {
+      "categories": [
+        "/bundy-kratke/",
+        "/dziny-barrel/",
+        "/trenckoty/"
+      ]
+    },
+    "/blog/5-klicovych-barev-pro-letni-satnik/": {
+      "categories": []
+    },
+    "/blog/5-modnich-trendu-jara-2024/": {
+      "categories": []
+    },
+    "/blog/5-party-tipu--ve-kterych-zazarite/": {
+      "categories": []
+    },
+    "/blog/5-stylovych-pokryvek-hlavy--o-tom-je-letosni-zima/": {
+      "categories": []
+    },
+    "/blog/5-tipu-jak-kombinovat-leginy/": {
+      "categories": []
+    },
+    "/blog/5-tipu-jak-na-jarni-detox-a-ocistu-tela/": {
+      "categories": []
+    },
+    "/blog/5-tipu-jak-nosit-saty-na-podzim-a-v-zime/": {
+      "categories": [
+        "/saty-na-raminka/",
+        "/pletene-svetry/",
+        "/spolecenske-saty-na-raminka/"
+      ]
+    },
+    "/blog/5-tipu-na-vanocni-darky-na-posledni-chvili/": {
+      "categories": []
+    },
+    "/blog/5-tipu-pro-bezpecne-opalovani/": {
+      "categories": []
+    },
+    "/blog/5-veci-na-ktere-nezapomenout-na-valentyna/": {
+      "categories": []
+    },
+    "/blog/5-viralnich-outfitu-se-stylovou-salou/": {
+      "categories": [
+        "/saly/",
+        "/zimni-doplnky/"
+      ]
+    },
+    "/blog/5-zimnich-outfitu-ve-znameni-stylu-a-pohodli/": {
+      "categories": []
+    },
+    "/blog/6-ikonickych-kabelek--do-kterych-se-vyplati-investovat/": {
+      "categories": []
+    },
+    "/blog/6-tipu-na-letosni-trendy-saty-ke-stromecku/": {
+      "categories": [
+        "/vanocni-obleceni/",
+        "/vanocni-obleceni-svetry/",
+        "/saty-trpytive-stribrna/"
+      ]
+    },
+    "/blog/6-tipu-na-vanocni-saty-pro-kazdou-z-vas/": {
+      "categories": []
+    },
+    "/blog/7-kroku-k-prehlednejsimu-satniku--jak-na-kapslovy-satnik/": {
+      "categories": [
+        "/oversize-saka/",
+        "/kosile/",
+        "/nausnice/"
+      ]
+    },
+    "/blog/7-nejlepsich-outfitu-ze-serialu-emily-in-paris-2/": {
+      "categories": []
+    },
+    "/blog/7-nezbytnosti--ktere-by-vam-v-kabelce-nemely-chybet/": {
+      "categories": []
+    },
+    "/blog/7-tipu-na-domaci-pletove-masky/": {
+      "categories": []
+    },
+    "/blog/7-tipu-na-vanocni-darky-pro-zeny--ktere-miluji-modu-a-styl/": {
+      "categories": []
+    },
+    "/blog/8-ikonickych-outfitu-lady-diany--ktere-nas-chytili-za-srdce/": {
+      "categories": []
+    },
+    "/blog/8-typu-dzinu--ktere-jsou-ty-vase/": {
+      "categories": []
+    },
+    "/blog/all-black-outfit/": {
+      "categories": []
+    },
+    "/blog/and-just-like-that--serial-sex-ve-meste-bude-mit-pokracovani/": {
+      "categories": []
+    },
+    "/blog/baleriny-a-dziny--jednoducha-jarni-kombinace--ktera-vzdy-vypada-stylove/": {
+      "categories": [
+        "/dziny/",
+        "/obuv-baleriny/",
+        "/dziny-mom/"
+      ]
+    },
+    "/blog/barevne-kombinace--ktere-vzdy-funguji/": {
+      "categories": []
+    },
+    "/blog/barvy-jara--zacni-je-nosit-uz-ted/": {
+      "categories": []
+    },
+    "/blog/barvy-roku-2020/": {
+      "categories": []
+    },
+    "/blog/basket-bag--nase-letni-posedlost/": {
+      "categories": []
+    },
+    "/blog/batika-zaziva-comeback/": {
+      "categories": []
+    },
+    "/blog/beauty-tipy--ktere-se-vyplati-dodrzovat/": {
+      "categories": []
+    },
+    "/blog/birkinku-nebo-louis-vuittona-muze-mit-dnes-kazdy-aneb-na-slovicko-o-padelcich/": {
+      "categories": []
+    },
+    "/blog/business-dress-code-pro-zeny/": {
+      "categories": [
+        "/saka-blazery/",
+        "/sukne-midi-pod-kolena/",
+        "/kalhotove-kostymy/"
+      ]
+    },
+    "/blog/business-moda/": {
+      "categories": [
+        "/saka-blazery/",
+        "/kostymy-se-sukni/",
+        "/kalhotove-kostymy/"
+      ]
+    },
+    "/blog/casual-dress-code-pro-zeny/": {
+      "categories": [
+        "/dziny/",
+        "/kosile/",
+        "/svetry/"
+      ]
+    },
+    "/blog/cerna-a-bila--kombinace-jako-stvorena-pro-babi-leto/": {
+      "categories": []
+    },
+    "/blog/christian-dior-revolucionar-ve-svete-mody-/": {
+      "categories": []
+    },
+    "/blog/co-je-muselin--a-proc-je-tak-oblibeny-prave-v-lete/": {
+      "categories": [
+        "/muselinova-kolekce/",
+        "/topy-na-leto/",
+        "/overaly-letni/"
+      ]
+    },
+    "/blog/co-oblect-jako-druzicka--ukazeme-vam-ty-nejhezci-saty/": {
+      "categories": []
+    },
+    "/blog/co-potrebuje-tva-plet-v-zime/": {
+      "categories": [
+        "/rolaky/",
+        "/saty-satenove/",
+        "/saty-sukne/"
+      ]
+    },
+    "/blog/co-prinesl-paris-fashion-week-pro-jaro-2021/": {
+      "categories": []
+    },
+    "/blog/co-si-vzit-pod-pruhledne-ci-prusvitne-saty/": {
+      "categories": [
+        "/spolecenske-saty/",
+        "/saty-prusvitne/",
+        "/body-stahovaci/"
+      ]
+    },
+    "/blog/co-ve-skutecnosti-znamenaji-tve-sny--5-nejcastejsich-snu-a-jejich-vyklad/": {
+      "categories": []
+    },
+    "/blog/cocktail-dress-code-pro-zeny/": {
+      "categories": [
+        "/koktejlove-saty/",
+        "/koktejlove-saty-leskle/",
+        "/koktejlove-saty-plisovane/"
+      ]
+    },
+    "/blog/cruelty-free-kuze-ekologicka-alernativa-budoucnosti/": {
+      "categories": []
+    },
+    "/blog/dejte-prostor-barvam--letosni-kabat-nebude-jen-cerny/": {
+      "categories": []
+    },
+    "/blog/delsi-a-elegantni-sortky--bermudy/": {
+      "categories": [
+        "/kratasy/",
+        "/riflove-kratasy/",
+        "/elegantni-kratasy/"
+      ]
+    },
+    "/blog/denni-vs--vecerni-vune--proc-ma-smysl-mit-vic-nez-jeden-parfem/": {
+      "categories": [
+        "/vune/",
+        "/luxusni/",
+        "/vune-parfemy-na-prani/"
+      ]
+    },
+    "/blog/difuzer-vs--interierovy-parfem-jaky-je-mezi-nimi-rozdil-a-kdy-po-cem-sahnout-/": {
+      "categories": [
+        "/home/",
+        "/vune-difuzer/"
+      ]
+    },
+    "/blog/dior-predstavil-kolekci-na-jaro-leto-2022-s-prvky-60--let--barevna-geometrie-se-vraci/": {
+      "categories": []
+    },
+    "/blog/dokonale-kousky-do-prace/": {
+      "categories": []
+    },
+    "/blog/doma-stylove--loungewear--ve-kterem-se-budes-citit-skvele/": {
+      "categories": [
+        "/elegantni-teplakove-soupravy/",
+        "/soupravy-bavlnene/",
+        "/teplakove-soupravy-sportovni/"
+      ]
+    },
+    "/blog/dziny--ktere-ovladnou-letosni-rok/": {
+      "categories": []
+    },
+    "/blog/femme-fatale-nejen-na-valentyna/": {
+      "categories": []
+    },
+    "/blog/festivalova-nalada-kazdy-den/": {
+      "categories": []
+    },
+    "/blog/inspirace--jak-se-oblect-do-divadla/": {
+      "categories": [
+        "/spolecenske-saty-do-divadla/",
+        "/sukne-satenove/",
+        "/boty-na-podpatku/"
+      ]
+    },
+    "/blog/inspirace--napadite-saty-na-vanocni-foceni/": {
+      "categories": [
+        "/vanocni-obleceni/",
+        "/saty-trpytive/",
+        "/saty-sukne-zlata/"
+      ]
+    },
+    "/blog/inspirace-a-napady-na-nejhezci-svatebni-ucesy/": {
+      "categories": [
+        "/saty-na-svatbu/",
+        "/saty-na-svatbu-ruzova/",
+        "/saty-na-svatbu-zelena/"
+      ]
+    },
+    "/blog/inspirace-na-crop-top-tricka-na-leto/": {
+      "categories": [
+        "/crop-topy/",
+        "/crop-topy-cerna/",
+        "/crop-topy-bila/"
+      ]
+    },
+    "/blog/inspirace-na-ohromujici-ucesy-na-ples/": {
+      "categories": [
+        "/saty-na-ples/",
+        "/saty-na-ples-cerna/",
+        "/saty-na-ples-maxi-dlouhe/"
+      ]
+    },
+    "/blog/inspirace-na-outfit-na-letni-festival-od-erika-fashion/": {
+      "categories": [
+        "/vzdusne-letni-saty/",
+        "/muselinove-saty/",
+        "/letni-saty/"
+      ]
+    },
+    "/blog/inspirace-na-romanticka-svatebni-mista/": {
+      "categories": [
+        "/saty-na-svatbu/",
+        "/saty-na-svatbu-vzdusne/",
+        "/saty-na-svatbu-elegantni/"
+      ]
+    },
+    "/blog/inspirace-na-stylove-podzimni-outfity-pro-zeny/": {
+      "categories": [
+        "/kosile-elegantni/",
+        "/kosilove-saty/",
+        "/plisovane-sukne/"
+      ]
+    },
+    "/blog/instagram-erika-fashion-potvrzuje-jedine--puntiky-jsou-zpet/": {
+      "categories": []
+    },
+    "/blog/jak-a-k-cemu-nosit-nadkolenky-a-podkolenky/": {
+      "categories": [
+        "/nadkolenky/",
+        "/sukne-skladane-mini-kratke/",
+        "/saty-mini-kratke/"
+      ]
+    },
+    "/blog/jak-jednoduse-ozivit-interier-vaseho-domova/": {
+      "categories": []
+    },
+    "/blog/jak-na-mikado-podle-gigi-hadid/": {
+      "categories": []
+    },
+    "/blog/jak-na-suche-a-poskozene-vlasy/": {
+      "categories": [
+        "/doplnky/",
+        "/klobouky/"
+      ]
+    },
+    "/blog/jak-nosit-baggy-dziny-a-vypadat-stale-zensky/": {
+      "categories": [
+        "/dziny-baggy/",
+        "/dziny-volne/",
+        "/topy-prilehave/"
+      ]
+    },
+    "/blog/jak-nosit-denim-v-roce-2020/": {
+      "categories": []
+    },
+    "/blog/jak-nosit-leginy-a-s-cim-kombinovat/": {
+      "categories": [
+        "/leginy/",
+        "/oversize-saka/",
+        "/cerne-leginy/"
+      ]
+    },
+    "/blog/jak-nosit-saty-v-zime/": {
+      "categories": [
+        "/saty-podzimni-a-zimni/",
+        "/svetrove-saty-seda-2/",
+        "/letni-saty/"
+      ]
+    },
+    "/blog/jak-nosit-siroke-kalhoty-a-s-cim-kombinovat/": {
+      "categories": [
+        "/siroke-kalhoty/",
+        "/dziny/"
+      ]
+    },
+    "/blog/jak-pecovat-o-obleceni/": {
+      "categories": []
+    },
+    "/blog/jak-se-nalicit-a-upravit-na-ples/": {
+      "categories": [
+        "/saty-na-ples/",
+        "/saty-na-ples-mini-kratke/",
+        "/saty-na-ples-vecerni/"
+      ]
+    },
+    "/blog/jak-se-spravne-starat-o-kasmirove-svetry/": {
+      "categories": []
+    },
+    "/blog/jak-se-vyspat-do-krasy/": {
+      "categories": []
+    },
+    "/blog/jak-se-zbavit-zatuchliny-z-obleceni/": {
+      "categories": [
+        "/kosile-bila/",
+        "/elegantni-svetry/"
+      ]
+    },
+    "/blog/jak-si-navlnit-vlasy-a-komu-slusi-kudrnate-vlasy/": {
+      "categories": [
+        "/soupravy-letni/",
+        "/spolecenske-saty-satenove/",
+        "/saty-maxi-dlouhe-na-raminka/"
+      ]
+    },
+    "/blog/jak-si-vybrat-kratasy--ve-kterych-se-budete-citit-skvele/": {
+      "categories": [
+        "/kratasy-bila/",
+        "/soupravy-letni-2/",
+        "/soupravy/"
+      ]
+    },
+    "/blog/jak-spravne-nanaset-samoopalovaci-pripravky--zdrava-a-opalena-pokozka-po-cely-rok/": {
+      "categories": []
+    },
+    "/blog/jak-stylove-nosit-mikinu/": {
+      "categories": [
+        "/mikiny/",
+        "/bile-mikiny/",
+        "/elegantni-kalhoty/"
+      ]
+    },
+    "/blog/jak-stylove-ozivit-pracovni-outfit/": {
+      "categories": []
+    },
+    "/blog/jak-vybirat-povleceni-podle-rocniho-obdobi/": {
+      "categories": [
+        "/povleceni/"
+      ]
+    },
+    "/blog/jak-vybrat-nejlepsi-sportovni-podprsenku-a-na-jake-sporty-se-hodi/": {
+      "categories": [
+        "/podprsenky-sportovni/",
+        "/sportovni-obleceni/",
+        "/podprsenky-sportovni-na-raminka/"
+      ]
+    },
+    "/blog/jak-vybrat-spravne-pradlo-pod-saty/": {
+      "categories": [
+        "/saty-odhalena-zada/",
+        "/saty-satenove/",
+        "/saty-sifonove/"
+      ]
+    },
+    "/blog/jak-vypadat-dobre-bez-podprsenky/": {
+      "categories": []
+    },
+    "/blog/jak-zabalit-originalne-darek/": {
+      "categories": [
+        "/vanocni-obleceni/",
+        "/saty-na-ples/"
+      ]
+    },
+    "/blog/jaka-barva-se-hodi-k-hnede-a-jak-ji-kombinovat/": {
+      "categories": [
+        "/cardigany-hneda/",
+        "/saty-podzimni-a-zimni/",
+        "/svetry/"
+      ]
+    },
+    "/blog/jake-barvy-obleceni-se-k-sobe-nehodi-a-nekombinujte-je/": {
+      "categories": [
+        "/siroke-kalhoty/",
+        "/oversize-mikiny/",
+        "/kabaty-kozesinove/"
+      ]
+    },
+    "/blog/jake-boty-ovladnou-ulice-na-jare-2020/": {
+      "categories": []
+    },
+    "/blog/jake-boty-se-hodi-k-sirokym-kalhotam/": {
+      "categories": [
+        "/siroke-kalhoty/",
+        "/siroke-dziny/",
+        "/pantofle/"
+      ]
+    },
+    "/blog/jake-doplnky-jsou-na-podzim-vitany/": {
+      "categories": []
+    },
+    "/blog/jake-silonky-k-cernym-ci-cervenym-satum/": {
+      "categories": [
+        "/saty-sukne-cerna/",
+        "/saty-sukne-cervena/",
+        "/koktejlove-saty-cerna-2/"
+      ]
+    },
+    "/blog/jake-typy-satu-jsou-vhodne-pro-plnostihle/": {
+      "categories": [
+        "/elegantni-saty/",
+        "/saka-kratke/",
+        "/riflove-bundy/"
+      ]
+    },
+    "/blog/jakou-obuv-vybrat-na-letosni-jaro-a-leto/": {
+      "categories": []
+    },
+    "/blog/jarni-color-blocking--znate-dokonale-jarni-kombinace/": {
+      "categories": []
+    },
+    "/blog/jarni-damske-bundy--ktere-ovladnou-tuto-sezonu/": {
+      "categories": [
+        "/prechodne-bundy-jarni/",
+        "/cerna-saka/",
+        "/dziny-straight-fit/"
+      ]
+    },
+    "/blog/jarni-kapsulovy-satnik/": {
+      "categories": [
+        "/sandaly-na-vysokem-podpatku/",
+        "/obuv-baleriny/",
+        "/luxusni-kabelky/"
+      ]
+    },
+    "/blog/jarni-skincare-rutina--produkty--ktere-pomohou-pleti-po-zime-znovu-zazarit/": {
+      "categories": [
+        "/elegantni-saty/",
+        "/kalhotove-kostymy/",
+        "/obuv-lodicky/"
+      ]
+    },
+    "/blog/kabaty--ktere-ovladnou-letosni-zimu/": {
+      "categories": []
+    },
+    "/blog/kabelky--do-kterych-se-vyplati-investovat/": {
+      "categories": []
+    },
+    "/blog/kalhotove-kostymy-jsou-sik/": {
+      "categories": [
+        "/kalhotove-kostymy/",
+        "/kalhotove-kostymy-cerna/",
+        "/boty-na-podpatku/"
+      ]
+    },
+    "/blog/kalhoty-na-leto--jake-materialy-a-strihy-zvolit-pri-tropickych-teplotach/": {
+      "categories": [
+        "/letni-kalhoty/",
+        "/kalhoty-lnene/",
+        "/tilka/"
+      ]
+    },
+    "/blog/komplety-jsou-hitem-letosniho-roku/": {
+      "categories": []
+    },
+    "/blog/komu-slusi-siroke-kalhoty-a-jak-je-kombinovat/": {
+      "categories": [
+        "/siroke-kalhoty/",
+        "/siroke-dziny/",
+        "/dziny-bootcut/"
+      ]
+    },
+    "/blog/kosilove-saty/": {
+      "categories": [
+        "/kosilove-saty/",
+        "/kosilove-saty-ackove/",
+        "/letni-saty-vzdusne/"
+      ]
+    },
+    "/blog/kostkovany-vzor-vladne-podzimu/": {
+      "categories": []
+    },
+    "/blog/kovbojske-boty-vladnou-podzimu/": {
+      "categories": []
+    },
+    "/blog/kratasy-a-sako-jsou-skvela-letni-dvojka/": {
+      "categories": []
+    },
+    "/blog/krivak--zakladni-odev--ktery-nikdy-nezklame/": {
+      "categories": []
+    },
+    "/blog/laska-prochazi-zaludkem/": {
+      "categories": []
+    },
+    "/blog/laska-v-case-korony--nase-tipy-na-valentynske-outfity/": {
+      "categories": []
+    },
+    "/blog/leopardi-a-zvireci-vzory-obleceni-jsou-hitem-sezony/": {
+      "categories": [
+        "/leopardi-kolekce/"
+      ]
+    },
+    "/blog/letni-dovolena--co-si-sbalit-o-kufru/": {
+      "categories": []
+    },
+    "/blog/letni-must-have--jednodilne-plavky/": {
+      "categories": []
+    },
+    "/blog/letni-obuv-vs-krasne-nozky/": {
+      "categories": []
+    },
+    "/blog/letni-outfit-za-skvele-ceny/": {
+      "categories": [
+        "/letni-saty/",
+        "/saty-bez-rukavu/",
+        "/letni-sukne/"
+      ]
+    },
+    "/blog/letni-saty-od-erika-fashion--ve-kterych-zvladnes-mesto-i-more/": {
+      "categories": [
+        "/letni-saty/",
+        "/muselinove-saty/",
+        "/letni-saty-bavlnene/"
+      ]
+    },
+    "/blog/loznice-jako-z-pinterestu/": {
+      "categories": []
+    },
+    "/blog/manikura-roku-2022--11-trendy-barev/": {
+      "categories": []
+    },
+    "/blog/maxi-nebo-mini--pruvodce-saty-podle-typu-postavy-a-prilezitosti/": {
+      "categories": [
+        "/saty-spolecenske-bordo/",
+        "/elegantni-saty-mini-kratke/",
+        "/saty-dlouhy-rukav/"
+      ]
+    },
+    "/blog/maxi-saty--ktere-ovladnou-leto/": {
+      "categories": [
+        "/letni-saty-maxi-dlouhe/",
+        "/letni-saty-elasticke/",
+        "/muselinove-saty/"
+      ]
+    },
+    "/blog/maxi-sukne--minimum-namahy--stylove-kombinace-na-kazdy-den/": {
+      "categories": [
+        "/sukne-maxi-dlouhe/",
+        "/kostymy-se-sukni/",
+        "/letni-sukne-maxi-dlouhe/"
+      ]
+    },
+    "/blog/maxi-sukne--trend--ktery-ceka-na-jaro/": {
+      "categories": []
+    },
+    "/blog/mini-kabelka-gabbi--ktera-pripomina-croissant-poblaznila-celebrity-i-fashionistky/": {
+      "categories": []
+    },
+    "/blog/mini-pouch-bags--nejmensi-kabelky-sezony-jsou-nejvetsim-jarnim-hitem/": {
+      "categories": [
+        "/male-kabelky/",
+        "/kalhotove-kostymy/"
+      ]
+    },
+    "/blog/modni-prehlidka-v-kuchyni-aneb-co-na-sebe-v-karantene/": {
+      "categories": []
+    },
+    "/blog/modni-trend-roku-2020--puff-rukavy/": {
+      "categories": []
+    },
+    "/blog/modni-trendy-2021--jake-komplety-budou-na-jare-hitem/": {
+      "categories": []
+    },
+    "/blog/modni-trendy-pro-podzim-2022--kterym-davame-zelenou/": {
+      "categories": []
+    },
+    "/blog/na-svatbu--dovolenou-i-do-mesta--jake-letni-saty-nesmi-chybet-ve-tvem-satniku/": {
+      "categories": [
+        "/saty-bila-2-maxi-dlouhe/",
+        "/letni-saty-maxi-dlouhe/",
+        "/muselinova-kolekce/"
+      ]
+    },
+    "/blog/na-vlne-minimalismu/": {
+      "categories": []
+    },
+    "/blog/nase-nejkrasnejsi-druzicky/": {
+      "categories": []
+    },
+    "/blog/nase-tipy-na-damske-obleceni-do-tropickych-dnu/": {
+      "categories": [
+        "/muselinova-kolekce/",
+        "/overaly-letni/",
+        "/kosile-halenky-muselinove/"
+      ]
+    },
+    "/blog/navrat-balerinek--obuv--se-kterou-prichazi-jaro/": {
+      "categories": []
+    },
+    "/blog/ne-tak-uplne-konfekcni/": {
+      "categories": []
+    },
+    "/blog/nejfotogenictejsi-modni-trendy/": {
+      "categories": []
+    },
+    "/blog/nejkrasnejsi-letni-saty--jaky-je-nas-vyber-za-erika-fashion/": {
+      "categories": [
+        "/letni-saty/",
+        "/letni-saty-kvetovane/",
+        "/letni-saty-lnene/"
+      ]
+    },
+    "/blog/nejlepsi-nude-rtenky--ktere-musite-vyzkouset/": {
+      "categories": []
+    },
+    "/blog/nejlepsi-plazove-kousky--aneb-co-si-sbalit-na-dovolenou/": {
+      "categories": []
+    },
+    "/blog/noste-teplakovku-stylove-jako-svetozname-influencerky/": {
+      "categories": []
+    },
+    "/blog/nova-kolekce--vyber-si-ty-nejlepsi-kousky-pro-tuto-sezonu/": {
+      "categories": []
+    },
+    "/blog/nova-podzimni-kolekce-michael-kors/": {
+      "categories": []
+    },
+    "/blog/obleknete-se-do-kvetu/": {
+      "categories": []
+    },
+    "/blog/odhalte-fascinujici-zivot-slavne-coco-chanel/": {
+      "categories": []
+    },
+    "/blog/oslnive-trendy-na-plesove-saty/": {
+      "categories": [
+        "/saty-na-ples/",
+        "/saty-na-ples-cerna-2-maxi-dlouhe/",
+        "/maturitni-saty/"
+      ]
+    },
+    "/blog/osmdesatky-jsou-zpet/": {
+      "categories": []
+    },
+    "/blog/outfit-dne--monochromaticky-rostacky-denim/": {
+      "categories": []
+    },
+    "/blog/outfit-na-rande--co-zaujme-a-co-ne/": {
+      "categories": [
+        "/saty-sukne-cerna/",
+        "/dziny/",
+        "/saka-blazery/"
+      ]
+    },
+    "/blog/plazove-saty-jake-jsou-druhy-a-trendy/": {
+      "categories": [
+        "/prehozy-pres-plavky/",
+        "/plazove-saty-a-tuniky/",
+        "/letni-saty/"
+      ]
+    },
+    "/blog/plesove-trendy--ktere-nejsou-jen-na-jednu-sezonu/": {
+      "categories": [
+        "/saty-na-ples/",
+        "/spolecenske-saty/",
+        "/spolecenske-saty-maxi-dlouhe/"
+      ]
+    },
+    "/blog/pletenina-vladne-podzimu/": {
+      "categories": []
+    },
+    "/blog/podzimni-damske-bundy-a-nove-trendy/": {
+      "categories": [
+        "/kabaty-kratke/",
+        "/zimni-bundy/",
+        "/prechodne-prosivane-bundy/"
+      ]
+    },
+    "/blog/podzimni-nail-trends--ktere-musis-vyzkouset/": {
+      "categories": []
+    },
+    "/blog/podzimni-tipy--co-by-nemelo-chybet-ve-tve-kosmeticke-tasticce/": {
+      "categories": []
+    },
+    "/blog/podzimni-trend--ktery-nosi-vsechny-fashionistky--combat-boots/": {
+      "categories": []
+    },
+    "/blog/ponozky-v-sandalech-6-tipu-jak-je-nosit-a-vypadat-stylove/": {
+      "categories": []
+    },
+    "/blog/prehled-vsech-dress-codu-pro-zeny/": {
+      "categories": [
+        "/saty-cervena-3-mini-kratke/",
+        "/dziny-straight-fit/",
+        "/kosile-bila/"
+      ]
+    },
+    "/blog/proc-je-snidane-tak-dulezita/": {
+      "categories": []
+    },
+    "/blog/pustte-jaro-do-sveho-satniku/": {
+      "categories": []
+    },
+    "/blog/r---10-veci--ktere-by-nemely-chybet-v-tvem-jarnim-satniku/": {
+      "categories": []
+    },
+    "/blog/r---5-ucesu-pro-dlouhe-vlasy/": {
+      "categories": []
+    },
+    "/blog/r---6-modnich-trendu-pro-jaro-leto-2022/": {
+      "categories": []
+    },
+    "/blog/r---6-tipu--jak-skutecne-zacit-cvicit/": {
+      "categories": []
+    },
+    "/blog/r---6-vlasovych-triku-pro-objem-a-hustotu-vasich-vlasu/": {
+      "categories": []
+    },
+    "/blog/r---ikona-meghan-markle-oslavuje-40--narozeniny--podivejte-se-na-jeji-nejpopularnejsi-outfity/": {
+      "categories": []
+    },
+    "/blog/r---jak-pecovat-o-plet--kazdodenni-rutina-krok-za-krokem/": {
+      "categories": []
+    },
+    "/blog/ritualy-pred-spanim--jak-male-detaily-meni-kvalitu-odpocinku/": {
+      "categories": [
+        "/povleceni/",
+        "/povleceni-bavlnene/",
+        "/povleceni-satenove/"
+      ]
+    },
+    "/blog/s-cim-a-jak-kombinovat-damska-saka/": {
+      "categories": [
+        "/saka-blazery/",
+        "/basic-topy/",
+        "/basic-tilka/"
+      ]
+    },
+    "/blog/s-cim-zazarite--darkove-sety--ktere-potesi-nejen-pod-stromeckem/": {
+      "categories": [
+        "/teplakove-soupravy/",
+        "/vanocni-obleceni/",
+        "/vanocni-obleceni-komplety/"
+      ]
+    },
+    "/blog/saty-na-svatbu--ve-kterych-zazarite/": {
+      "categories": []
+    },
+    "/blog/self-being-edit--aneb-jak-moda-ovlivnuje-tve-zimni-ritualy/": {
+      "categories": [
+        "/pletene-svetry/",
+        "/teplakove-soupravy/",
+        "/kabaty-vlnene/"
+      ]
+    },
+    "/blog/semisove-kabelky-jsou-nejvetsi-jarni-trend--proc-vypadaji-luxusneji-nez-klasicka-kuze/": {
+      "categories": [
+        "/kabelky/",
+        "/bezove-kabelky/",
+        "/dziny/"
+      ]
+    },
+    "/blog/sera-na-rust-ras--ktera-skutecne-funguji/": {
+      "categories": []
+    },
+    "/blog/serialy--ktere-musite-videt/": {
+      "categories": []
+    },
+    "/blog/seznamte-se-s-barvami-roku--zluta-a-seda-maji-navodit-pocit-nadeje/": {
+      "categories": []
+    },
+    "/blog/sezona-vecirku-je-tady--nas-pruvodce-nejvic-chic-outfity/": {
+      "categories": []
+    },
+    "/blog/siroke-kalhoty-a-zvony--jak-nosit-tento-trend/": {
+      "categories": [
+        "/siroke-dziny/",
+        "/dziny-vysoky-pas/",
+        "/halenky/"
+      ]
+    },
+    "/blog/sitovane--satenove-i-kozene--baleriny-letos-dobyvaji-jaro/": {
+      "categories": [
+        "/obuv-baleriny/",
+        "/dziny-mom/",
+        "/dziny-straight-fit/"
+      ]
+    },
+    "/blog/spf/": {
+      "categories": [
+        "/doplnky/",
+        "/prehozy-pres-plavky/",
+        "/klobouky/"
+      ]
+    },
+    "/blog/studene-barvy-obleceni--komu-slusi/": {
+      "categories": [
+        "/saty-spolecenske-tyrkysova/",
+        "/siroke-kalhoty/",
+        "/spolecenske-saty-maxi-dlouhe/"
+      ]
+    },
+    "/blog/styling--jak-nosit-1-sako-3x-jinak/": {
+      "categories": []
+    },
+    "/blog/stylove-jarni-outfity--to-nejlepsi-z-nasi-nabidky/": {
+      "categories": []
+    },
+    "/blog/svatba-na-plazi--lehke-outfity-a-saty-jsou-nejlepsi/": {
+      "categories": [
+        "/saty-na-svatbu/",
+        "/letni-saty-plisovane/",
+        "/saty-vzdusne/"
+      ]
+    },
+    "/blog/svatebni-etiketa--na-jaka-pravidla-nezapomenout/": {
+      "categories": [
+        "/saty-na-svatbu/",
+        "/saty-pro-druzicky/",
+        "/spolecenske-saty-na-svatbu-pro-maminky/"
+      ]
+    },
+    "/blog/svatebni-hry--kvizy-a-souteze--co-zaujme/": {
+      "categories": [
+        "/saty-na-svatbu/",
+        "/saty-na-svatbu-host-svedek/",
+        "/spolecenske-saty-na-svatbu-pro-maminky/"
+      ]
+    },
+    "/blog/svudne-versus-pohodlne--kde-koupit-to-spravne-spodni-pradlo/": {
+      "categories": []
+    },
+    "/blog/teddy--shearling-a-faux-fur--tuhle-zimu-budes-v-teple/": {
+      "categories": [
+        "/zimni-kabaty/",
+        "/kabaty-kozesinove/",
+        "/zimni-kabaty-dlouhe/"
+      ]
+    },
+    "/blog/tehotenska-moda-pro-nastavajici-maminky/": {
+      "categories": []
+    },
+    "/blog/teplakova-souprava-na-leto--jak-ji-nosit-stylove-po-cely-rok/": {
+      "categories": [
+        "/teplakove-soupravy/",
+        "/teplakove-soupravy-bavlnene/",
+        "/teplakove-soupravy-bezova/"
+      ]
+    },
+    "/blog/tipy-na-okouzlujici-valentynske-darky-pro-zeny/": {
+      "categories": [
+        "/nahrdelniky/",
+        "/naramky/",
+        "/nausnice/"
+      ]
+    },
+    "/blog/tipy-na-vanocni-darky--ktere-se-vejdou-do-vaseho-rozpoctu/": {
+      "categories": []
+    },
+    "/blog/tipy-pro-produktivni-start-dne/": {
+      "categories": []
+    },
+    "/blog/trendy-doplnky--kombinace--ktere-vysperkuji-tvuj-outfit/": {
+      "categories": []
+    },
+    "/blog/trendy-jarni-bundy-2/": {
+      "categories": []
+    },
+    "/blog/trendy-jarni-bundy/": {
+      "categories": []
+    },
+    "/blog/trendy-jarni-kabelky/": {
+      "categories": []
+    },
+    "/blog/trendy-letni-ucesy-do-horkeho-pocasi/": {
+      "categories": []
+    },
+    "/blog/trendy-letosniho-podzimu/": {
+      "categories": []
+    },
+    "/blog/trendy-obuv--kterou-chceme-nosit-v-roce-2024/": {
+      "categories": []
+    },
+    "/blog/trendy-vycesane-oboci--jednoduche-triky-jak-dosahnout-nejlepsiho-vysledku/": {
+      "categories": []
+    },
+    "/blog/trendy-zkracovani--jarni-kabatky--bombery-i-kratke-trenckoty/": {
+      "categories": []
+    },
+    "/blog/valentyn-se-blizi--mame-pro-vas-3-tipy-na-originalni-darky/": {
+      "categories": []
+    },
+    "/blog/vanocni-inspirace--ty-nejlepsi-darky-pro-ni/": {
+      "categories": []
+    },
+    "/blog/vanocni-wishlist-pro-modni-nadsence/": {
+      "categories": [
+        "/bizuterie/",
+        "/naramky/",
+        "/nahrdelniky/"
+      ]
+    },
+    "/blog/victoria-beckham-na-londynskem-tydnu-mody/": {
+      "categories": []
+    },
+    "/blog/vitamin-c--jaky-ma-vliv-na-plet-a-proc-ho-zaradit-do-pletove-rutiny/": {
+      "categories": []
+    },
+    "/blog/vsadte-na-monochromaticky-podzimni-look/": {
+      "categories": []
+    },
+    "/blog/yves-saint-laurent--genius-s-krehkou-dusi--ktery-navzdy-zmenil-svet-mody/": {
+      "categories": []
+    },
+    "/blog/z-kancelare-na-kavu--kosilove-saty-jako-zaklad-satniku/": {
+      "categories": [
+        "/kosilove-saty/",
+        "/kosilove-saty-bezova/",
+        "/boty-na-podpatku/"
+      ]
+    },
+    "/blog/zamereno-na-kalhoty-aneb-jarni-strihy-2020/": {
+      "categories": []
+    },
+    "/blog/zazari--co-si-oblect-na-vanocni-vecirek/": {
+      "categories": [
+        "/boty-na-podpatku/",
+        "/bizuterie/",
+        "/cerne-saty-male/"
+      ]
+    },
+    "/blog/zima-ma-sve-favority--budte-pripravena/": {
+      "categories": []
+    },
+    "/blog/zpevacka-adele-zhubla-45-kg--vydala-nove-album-a-hlasi-comeback/": {
+      "categories": []
+    },
+    "/blog/zvireci-vzory-ozivi-kazdy-podzimni-outfit/": {
+      "categories": []
     }
   },
-  "fallback_categories": ["/saty-sukne/"]
+  "fallback_categories": [
+    "/saty-sukne/"
+  ]
 }

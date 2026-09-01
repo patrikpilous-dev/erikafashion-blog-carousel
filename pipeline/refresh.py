@@ -84,8 +84,14 @@ def real_img(imgtag):
     return ""
 
 
+_CAT_CACHE = {}
+
+
 def category_products(cat_path):
-    """Kandidati z kategorie v poradi vypisu, vc. stranky /strana-N/."""
+    """Kandidati z kategorie v poradi vypisu, vc. stranky /strana-N/.
+    Kategorie sdili vic clanku, proto se stahuje jen jednou za beh."""
+    if cat_path in _CAT_CACHE:
+        return _CAT_CACHE[cat_path]
     out, seen = [], set()
     for page in range(1, CONFIG["max_category_pages"] + 1):
         suffix = "" if page == 1 else f"strana-{page}/"
@@ -112,6 +118,7 @@ def category_products(cat_path):
             found += 1
         if found == 0 or f"strana-{page + 1}/" not in html:
             break
+    _CAT_CACHE[cat_path] = out
     return out
 
 
@@ -171,14 +178,35 @@ def main():
 
     default_items = default_items[:n]
 
-    out = {
-        "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "fallback_enabled": CONFIG["fallback_enabled"],
-        "articles": articles,
-        "default": {"products": default_items},
-    }
-    (ROOT / "carousel.json").write_text(
-        json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+    # Jeden soubor per clanek — prohlizec stahuje jen svoje data (~4 kB),
+    # ne celou mapu blogu. Slozka a/ se pred zapisem vycisti, aby po smazani
+    # clanku nezustavaly osirele soubory.
+    outdir = ROOT / "a"
+    outdir.mkdir(exist_ok=True)
+    for old in outdir.glob("*.json"):
+        old.unlink()
+
+    generated = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for article_path, entry in articles.items():
+        slug = article_path.strip("/").split("/")[-1]
+        (outdir / f"{slug}.json").write_text(
+            json.dumps({"generated": generated, "products": entry["products"]},
+                       ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8",
+        )
+    (outdir / "_default.json").write_text(
+        json.dumps({"generated": generated, "products": default_items},
+                   ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    (ROOT / "index.json").write_text(
+        json.dumps({
+            "generated": generated,
+            "fallback_enabled": CONFIG["fallback_enabled"],
+            "count": len(articles),
+            "articles": sorted(articles),
+        }, ensure_ascii=False, indent=1),
+        encoding="utf-8",
     )
     print(f"OK: {len(articles)} clanku, default {len(default_items)} produktu, feed {len(feed)} produktu")
 

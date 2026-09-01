@@ -19,23 +19,27 @@
 <div class="meta" id="meta">Načítám carousel.json…</div>
 <div id="out"></div>
 <script>
-fetch("carousel.json").then(r => r.json()).then(data => {
+fetch("index.json").then(r => r.json()).then(async idx => {
   document.getElementById("meta").textContent =
-    "Vygenerováno: " + data.generated + " · článků: " + Object.keys(data.articles).length +
-    " · fallback " + (data.fallback_enabled ? "zapnutý" : "vypnutý");
+    "Vygenerováno: " + idx.generated + " · článků: " + idx.count +
+    " · fallback " + (idx.fallback_enabled ? "zapnutý" : "vypnutý") +
+    " · náhled prvních 12";
   const out = document.getElementById("out");
-  const entries = Object.entries(data.articles).concat([["default (fallback pro nenamapované)", data.default]]);
-  for (const [path, entry] of entries) {
+  const paths = idx.articles.slice(0, 12).concat(["_default"]);
+  for (const path of paths) {
+    const slug = path === "_default" ? "_default" : path.replace(/\/$/, "").split("/").pop();
+    const data = await fetch("a/" + slug + ".json").then(r => r.json());
     const div = document.createElement("div");
     div.className = "article";
-    const link = path.startsWith("/") ? '<a href="https://www.erikafashion.cz' + path + '" target="_blank">' + path + "</a>" : path;
-    div.innerHTML = "<h3>" + link + " · " + entry.products.length + " produktů</h3>";
-    // render pres stejny kod jako na webu
+    const link = path === "_default"
+      ? "default (bestsellery pro nenamapované)"
+      : '<a href="https://www.erikafashion.cz' + path + '" target="_blank">' + path + "</a>";
+    div.innerHTML = "<h3>" + link + " · " + data.products.length + " produktů</h3>";
     const host = document.createElement("div");
     host.className = "news-item-detail";
     div.appendChild(host);
     out.appendChild(div);
-    renderCarousel(host, entry.products);
+    renderCarousel(host, data.products);
   }
 });
 // zjednodusena kopie renderu z carousel.js (bez GA4)
