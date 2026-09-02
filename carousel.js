@@ -17,6 +17,21 @@
   var articlePath = location.pathname;
   var articleSlug = articlePath.replace(/^\/blog\/|\/$/g, "");
 
+  /* Data jdou do innerHTML. Pochazi sice z vlastniho feedu e-shopu, ale nazev
+     produktu je volny text z administrace — jedny uvozovky nebo znak < by
+     rozbily markup. Escapujeme vzdy, aby obsah nemohl vlozit vlastni HTML. */
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  /* Odkaz i obrazek smi vest jen na vlastni domenu — pojistka proti tomu, aby
+     se do carouselu dala podstrcit cizi URL (javascript:, cizi web). */
+  function safeUrl(u) {
+    return /^https:\/\/www\.erikafashion\.cz\//.test(u) ? u : "";
+  }
+
   function formatPrice(p) {
     try {
       return new Intl.NumberFormat("cs-CZ", { style: "currency", currency: "CZK", maximumFractionDigits: 0 }).format(p);
@@ -109,10 +124,12 @@
       "<button class=\"ppcar-btn ppcar-prev\" type=\"button\" aria-label=\"Předchozí\">&#10094;</button>" +
       "<div class=\"ppcar-track\">";
     products.forEach(function (p, i) {
-      html += "<div class=\"ppcar-item\"><a href=\"" + p.url + "\" data-i=\"" + i + "\">" +
-        "<img loading=\"lazy\" src=\"" + p.img + "\" alt=\"" + p.name.replace(/"/g, "&quot;") + "\">" +
-        "<div class=\"ppcar-name\">" + p.name + "</div>" +
-        "<div class=\"ppcar-price\">" + formatPrice(p.price) + "</div>" +
+      var url = safeUrl(p.url), img = safeUrl(p.img);
+      if (!url || !img) return;
+      html += "<div class=\"ppcar-item\"><a href=\"" + esc(url) + "\" data-i=\"" + i + "\">" +
+        "<img loading=\"lazy\" src=\"" + esc(img) + "\" alt=\"" + esc(p.name) + "\">" +
+        "<div class=\"ppcar-name\">" + esc(p.name) + "</div>" +
+        "<div class=\"ppcar-price\">" + esc(formatPrice(p.price)) + "</div>" +
         "<div class=\"ppcar-stock\">Skladem</div></a></div>";
     });
     html += "</div><button class=\"ppcar-btn ppcar-next\" type=\"button\" aria-label=\"Další\">&#10095;</button></div>";
