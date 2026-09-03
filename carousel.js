@@ -48,12 +48,8 @@
   function markClick(product) {
     var stamp = articleSlug + "|" + new Date().toISOString().slice(0, 10);
     try {
-      if (typeof window.gtag === "function") {
-        window.gtag("set", "user_properties", { ef_blog_carousel: stamp });
-      } else {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: "blog_carousel_click", ef_blog_carousel: stamp });
-      }
+      initGa();
+      ppcarGtag("set", "user_properties", { ef_blog_carousel: stamp });
     } catch (e) { /* mereni nesmi rozbit stranku */ }
     try {
       var key = "ppcar_clicks";
@@ -63,21 +59,38 @@
     } catch (e) { /* private mode */ }
   }
 
+  /* Web sice ma window.gtag, ale ten jen plni dataLayer pro GTM — do GA4 jde
+     jen to, na co ma nekdo v kontejneru zalozenou znacku. Overeno 2.9.2026:
+     vlastni gtag udalosti webu (napr. view_promotion) v GA4 nejsou. Proto si
+     drzime vlastni instanci mereni s oddelenou frontou (l=ppcarLayer), ktera
+     posila primo do GA4. Souhlas (consent mode) je na strance sdileny, takze
+     pri odmitnutem souhlasu se neodesle nic. */
+  var GA_ID = "G-BK3STSKL98";
+
+  function ppcarGtag() {
+    (window.ppcarLayer = window.ppcarLayer || []).push(arguments);
+  }
+
+  function initGa() {
+    if (window.__ppcarGaInit) return;
+    window.__ppcarGaInit = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID + "&l=ppcarLayer";
+    document.head.appendChild(s);
+    ppcarGtag("js", new Date());
+    ppcarGtag("config", GA_ID, { send_page_view: false });
+  }
+
   function ga4(eventName, items) {
-    var params = {
+    initGa();
+    ppcarGtag("event", eventName, {
       item_list_id: "blog_carousel",
       item_list_name: "blog: " + articleSlug,
       items: items.map(function (p, i) {
         return { item_id: String(p.code), item_name: p.name, price: p.price, index: i };
       }),
-    };
-    if (typeof window.gtag === "function") {
-      window.gtag("event", eventName, params);
-    } else {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ ecommerce: null });
-      window.dataLayer.push({ event: eventName, ecommerce: params });
-    }
+    });
   }
 
   var CSS = "" +
