@@ -59,32 +59,30 @@
     } catch (e) { /* private mode */ }
   }
 
-  /* Na tomhle webu produkuje zasahy do GA4 vyhradne GTM. Overeno 2.9.2026:
-     volani window.gtag('event', …) neodesle zadny pozadavek na
-     google-analytics.com — ani nase, ani vlastni udalosti webu (view_promotion
-     v GA4 chybi). Druha instance gtag.js taky nepomuze, knihovna uz jednou
-     inicializovane merici ID podruhe nenastavi.
-     Posilame proto klasicky dataLayer event, ktery umi GTM zachytit triggerem
-     "Custom Event". V kontejneru staci zalozit dve znacky GA4 Event:
-       blog_carousel_view  -> view_item_list
-       blog_carousel_click -> select_item
-     obe s promennou ecommerce (Data Layer Variable, verze 2). */
+  /* Vedle GA4 je na webu nakonfigurovany i Google Ads (AW-…). Bez parametru
+     send_to jde gtag udalost do Ads a do GA4 vubec nedorazi — proto driv nic
+     nemerilo. Overeno 4.9.2026 pocitanim pozadavku na /g/collect: bez send_to
+     0 pozadavku, se send_to 1. */
+  var GA_ID = "G-BK3STSKL98";
+
   function ga4(eventName, items) {
-    var ecommerce = {
-      item_list_id: "blog_carousel",
-      item_list_name: "blog: " + articleSlug,
-      items: items.map(function (p, i) {
-        return { item_id: String(p.code), item_name: p.name, price: p.price, index: i };
-      }),
-    };
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ ecommerce: null });
-    window.dataLayer.push({
-      event: eventName === "select_item" ? "blog_carousel_click" : "blog_carousel_view",
-      ga4_event_name: eventName,
-      blog_slug: articleSlug,
-      ecommerce: ecommerce,
-    });
+    try {
+      var params = {
+        send_to: GA_ID,
+        item_list_id: "blog_carousel",
+        item_list_name: "blog: " + articleSlug,
+        items: items.map(function (p, i) {
+          return { item_id: String(p.code), item_name: p.name, price: p.price, index: i };
+        }),
+      };
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, params);
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ ecommerce: null });
+        window.dataLayer.push({ event: "blog_carousel_" + eventName, ecommerce: params });
+      }
+    } catch (e) { /* mereni nesmi rozbit stranku */ }
   }
 
   var CSS = "" +
