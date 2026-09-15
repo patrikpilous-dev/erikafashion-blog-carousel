@@ -11,6 +11,8 @@ Vystup: carousel.json v rootu repa (serviruje GitHub Pages).
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,10 +23,22 @@ CONFIG = json.loads((ROOT / "pipeline" / "config.json").read_text(encoding="utf-
 UA = {"User-Agent": "Mozilla/5.0 (compatible; ef-blog-carousel/1.0)"}
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.read()
+def fetch(url, tries=4):
+    """Cloudflare pred e-shopem obcas vrati 520 (14. 9. 2026 tim spadl cely
+    denni beh). 5xx a sitove chyby proto zkousime znovu s rostouci pauzou,
+    4xx je trvala chyba a vyhodi se hned."""
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return r.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code < 500 or attempt == tries - 1:
+                raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if attempt == tries - 1:
+                raise
+        time.sleep(5 * 2 ** attempt)
 
 
 def slug_of(url):

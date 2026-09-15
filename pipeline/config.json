@@ -1063,9 +1063,42 @@
     },
     "/blog/zvireci-vzory-ozivi-kazdy-podzimni-outfit/": {
       "categories": []
+    },
+    "/blog/jak-a-kde-zmerit-boky-a-miry/": {
+      "categories": [
+        "/siroke-dziny/",
+        "/spolecenske-saty-maxi-dlouhe/"
+      ],
+      "added": "2026-09-15"
+    },
+    "/blog/jak-nejlepe-vycistit-pracku-a-proc-to-delat/": {
+      "categories": [
+        "/vune-do-pradla/",
+        "/vune-parfemy-na-prani-dlouhotrvajici/"
+      ],
+      "added": "2026-09-15"
+    },
+    "/blog/parfem-na-prani-nebo-klasicka-avivaz--v-cem-je-rozdil-a-proc-na-nem-zalezi/": {
+      "categories": [
+        "/vune-avivaz/",
+        "/vune-parfemy-na-prani/",
+        "/vune-parfemy-na-prani-dlouhotrvajici/"
+      ],
+      "added": "2026-09-15"
     }
   },
   "fallback_categories": [
     "/saty-sukne/"
+  ],
+  "nav_links": [
+    "/doprava-a-platba/",
+    "/hodnoceni-obchodu/",
+    "/kontakt/",
+    "/muj-pribeh-erika-eliasova/",
+    "/obchodni-podminky/",
+    "/ochrana-osobnich-udaju/",
+    "/prodejna-v-praze/",
+    "/stav-objednavky/",
+    "/vraceni-zbozi/"
   ]
 }

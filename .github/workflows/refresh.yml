@@ -12,20 +12,25 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # v7 bezi na Node 24; v4/v5 cilily na Node 20, ktery GitHub vypina
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
-      - name: Vygenerovat carousel.json
+      # nove clanky ze sitemapy -> tematicke mapovani do pipeline/config.json
+      - name: Namapovat nove clanky
+        run: python pipeline/discover.py
+
+      - name: Vygenerovat data carouselu
         run: python pipeline/refresh.py
 
       - name: Commit a push
         run: |
           git config user.name "carousel-bot"
           git config user.email "actions@github.com"
-          git add -A a index.json
+          git add -A a index.json pipeline/config.json
           # commit vzdy (i kdyz se data nezmenila, meni se timestamp "generated") —
           # denni commit drzi repo aktivni, takze GitHub scheduled workflow nikdy
           # nevypne pro 60 dni neaktivity
