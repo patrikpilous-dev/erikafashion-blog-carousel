@@ -1092,6 +1092,14 @@
         "/sportovni-obleceni/"
       ],
       "added": "2026-09-29"
+    },
+    "/blog/co-je-basic-obleceni-a-jake-ma-vyhody/": {
+      "categories": [
+        "/basic/",
+        "/tricka-bila/",
+        "/siroke-dziny/"
+      ],
+      "added": "2026-10-03"
     }
   },
   "fallback_categories": [
