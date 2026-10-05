@@ -1100,6 +1100,22 @@
         "/siroke-dziny/"
       ],
       "added": "2026-10-03"
+    },
+    "/blog/jak-kombinovat-baggy-dziny/": {
+      "categories": [
+        "/dziny-baggy/",
+        "/siroke-dziny/",
+        "/saka-blazery-cerna/"
+      ],
+      "added": "2026-10-05"
+    },
+    "/blog/jak-vybrat-vuni-do-bytu-podle-mistnosti/": {
+      "categories": [
+        "/home/",
+        "/vune-difuzer/",
+        "/osvezovace-vzduchu/"
+      ],
+      "added": "2026-10-05"
     }
   },
   "fallback_categories": [
