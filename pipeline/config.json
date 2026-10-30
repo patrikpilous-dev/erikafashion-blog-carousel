@@ -1116,6 +1116,38 @@
         "/osvezovace-vzduchu/"
       ],
       "added": "2026-10-05"
+    },
+    "/blog/barvy-burgundy-a-vinova-s-cim-je-nosit/": {
+      "categories": [
+        "/saty-sukne-vinova/",
+        "/saty-sukne-bordo/",
+        "/kalhotove-kostymy/"
+      ],
+      "added": "2026-10-30"
+    },
+    "/blog/co-na-silvestra-trpytive-a-stribrne-saty/": {
+      "categories": [
+        "/saty-trpytive/",
+        "/saty-sukne-stribrna/",
+        "/saty-sukne-zlata/"
+      ],
+      "added": "2026-10-30"
+    },
+    "/blog/jak-nosit-krajku-top-body-saty/": {
+      "categories": [
+        "/topy-krajkovane/",
+        "/body-krajkove/",
+        "/krajkove-saty/"
+      ],
+      "added": "2026-10-30"
+    },
+    "/blog/svetle-modra-barva-s-cim-ji-kombinovat/": {
+      "categories": [
+        "/dziny-svetle-modra/",
+        "/saty-sukne-svetle-modra/",
+        "/saty-na-svatbu-svetle-modra/"
+      ],
+      "added": "2026-10-30"
     }
   },
   "fallback_categories": [
